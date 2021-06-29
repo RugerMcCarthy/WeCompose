@@ -73,7 +73,7 @@ dependencies {
   if (android_builder_main_version < 7) {
     add("kotlinCompilerPluginClasspath", "androidx.compose.compiler:compiler:$compose_version")
   }
-  implementation 'androidx.appcompat:appcompat:1.2.0'
+  implementation "androidx.appcompat:appcompat:$compose_appcompat_version"
   implementation "androidx.compose.foundation:foundation:$compose_version"
   implementation "androidx.compose.foundation:foundation-layout:$compose_version"
   implementation "androidx.compose.material:material:$compose_version"

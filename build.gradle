@@ -4,6 +4,7 @@ buildscript {
     android_gradle_plugin_version = '4.1.2'
     kotlin_version = '1.4.21-2'
     compose_version = '1.0.0-alpha11'
+    compose_appcompat_version = '1.2.0'
   }
   repositories {
     google()
