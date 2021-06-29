@@ -1,24 +1,23 @@
 package com.rengwuxian.wecompose.ui
 
 import androidx.annotation.DrawableRes
-import androidx.compose.animation.core.AnimationClockObservable
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.ProvidableAmbient
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.viewinterop.viewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.rengwuxian.wecompose.R
 import com.rengwuxian.wecompose.WeViewModel
 import com.rengwuxian.wecompose.percentOffsetX
@@ -73,7 +72,7 @@ fun HomeBottomItem(
     modifier.padding(0.dp, 8.dp, 0.dp, 8.dp),
     horizontalAlignment = Alignment.CenterHorizontally
   ) {
-    Icon(vectorResource(iconId), null, Modifier.size(24.dp), tint = tint)
+    Icon(ImageVector.vectorResource(iconId), null, Modifier.size(24.dp), tint = tint)
     Text(title, fontSize = 11.sp, color = tint)
   }
 }

@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -21,7 +22,6 @@ import androidx.compose.ui.unit.sp
 import com.rengwuxian.wecompose.R
 import com.rengwuxian.wecompose.data.User
 import com.rengwuxian.wecompose.ui.theme.WeTheme
-import dev.chrisbanes.accompanist.insets.statusBarsPadding
 
 @Composable
 fun MeListTopBar() {
@@ -33,7 +33,7 @@ fun MeListTopBar() {
       .statusBarsPadding()
   ) {
     Image(
-      vectorResource(id = R.drawable.avatar_rengwuxian), contentDescription = "Me",
+      ImageVector.vectorResource(id = R.drawable.avatar_rengwuxian), contentDescription = "Me",
       Modifier
         .align(Alignment.CenterVertically)
         .padding(start = 24.dp)
@@ -69,7 +69,7 @@ fun MeListTopBar() {
       )
     }
     Icon(
-      vectorResource(id = R.drawable.ic_qrcode), contentDescription = "qrcode",
+      ImageVector.vectorResource(id = R.drawable.ic_qrcode), contentDescription = "qrcode",
       Modifier
         .align(Alignment.CenterVertically)
         .padding(end = 20.dp)
@@ -77,7 +77,7 @@ fun MeListTopBar() {
       tint = WeTheme.colors.onBackground
     )
     Icon(
-      vectorResource(R.drawable.ic_arrow_more), contentDescription = "更多",
+      ImageVector.vectorResource(R.drawable.ic_arrow_more), contentDescription = "更多",
       Modifier
         .align(Alignment.CenterVertically)
         .padding(end = 16.dp)
@@ -107,7 +107,7 @@ fun MeListItem(
     verticalAlignment = Alignment.CenterVertically
   ) {
     Image(
-      vectorResource(icon), "title", Modifier
+      ImageVector.vectorResource(icon), "title", Modifier
         .padding(12.dp, 8.dp, 8.dp, 8.dp)
         .size(36.dp)
         .padding(8.dp)
@@ -121,7 +121,7 @@ fun MeListItem(
     Spacer(Modifier.weight(1f))
     endBadge?.invoke()
     Icon(
-      vectorResource(R.drawable.ic_arrow_more), contentDescription = "更多",
+      ImageVector.vectorResource(R.drawable.ic_arrow_more), contentDescription = "更多",
       Modifier
         .padding(0.dp, 0.dp, 12.dp, 0.dp)
         .size(16.dp),

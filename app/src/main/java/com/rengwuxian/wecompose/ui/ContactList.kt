@@ -12,11 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.viewinterop.viewModel
 import com.rengwuxian.wecompose.R
 import com.rengwuxian.wecompose.WeViewModel
 import com.rengwuxian.wecompose.data.User
@@ -43,7 +43,7 @@ fun ContactListItem(
       .fillMaxWidth()
   ) {
     Image(
-      vectorResource(contact.avatar), "avatar", Modifier
+      ImageVector.vectorResource(contact.avatar), "avatar", Modifier
         .padding(12.dp, 8.dp, 8.dp, 8.dp)
         .size(36.dp)
         .clip(RoundedCornerShape(4.dp))
