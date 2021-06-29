@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -46,7 +47,7 @@ fun DiscoveryListItem(
     verticalAlignment = Alignment.CenterVertically
   ) {
     Image(
-      vectorResource(icon), "title", Modifier
+      ImageVector.vectorResource(icon), "title", Modifier
         .padding(12.dp, 8.dp, 8.dp, 8.dp)
         .size(36.dp)
         .padding(8.dp)
@@ -60,7 +61,7 @@ fun DiscoveryListItem(
     Spacer(Modifier.weight(1f))
     endBadge?.invoke()
     Icon(
-      vectorResource(R.drawable.ic_arrow_more), contentDescription = "更多",
+      ImageVector.vectorResource(R.drawable.ic_arrow_more), contentDescription = "更多",
       Modifier
         .padding(0.dp, 0.dp, 12.dp, 0.dp)
         .size(16.dp),
@@ -100,7 +101,7 @@ fun DiscoveryList() {
           }
         }, endBadge = {
           Image(
-            vectorResource(R.drawable.avatar_3), "avatar", Modifier
+            ImageVector.vectorResource(R.drawable.avatar_3), "avatar", Modifier
               .padding(8.dp, 0.dp)
               .size(32.dp)
               .unread(false, WeTheme.colors.badge)
@@ -115,7 +116,7 @@ fun DiscoveryList() {
         )
         DiscoveryListItem(R.drawable.ic_channels, "视频号", endBadge = {
           Image(
-            vectorResource(R.drawable.avatar_3), "avatar", Modifier
+            ImageVector.vectorResource(R.drawable.avatar_3), "avatar", Modifier
               .padding(8.dp, 0.dp)
               .size(32.dp)
               .unread(false, WeTheme.colors.badge)
